@@ -18,8 +18,10 @@ var commentRoutes = require("./routes/comments"),
     authRoutes = require("./routes/index");
 
 //seedDB();
-//var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12d";
-var url = process.env.DATABASEURL || "mongodb://Joseph:connect@ds149551.mlab.com:49551/js_yelpcamp_v12";
+// local url: "mongodb://localhost/yelp_camp_v12d";
+// mLab url: "mongodb://Joseph:connect@ds149551.mlab.com:49551/js_yelpcamp_v12"
+var url = process.env.DATABASEURL;
+//console.log(process.env.DATABASEURL);
 mongoose.connect(url);
 
 // Use connect-flash messages
