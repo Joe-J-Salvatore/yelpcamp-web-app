@@ -18,9 +18,12 @@ var commentRoutes = require("./routes/comments"),
     authRoutes = require("./routes/index");
 
 //seedDB();
-// local url: "mongodb://localhost/yelp_camp_v12d";
+// ============
+// DATABASE URL
+// ============
+// local url: "mongodb://localhost/yelp_camp_v12d"; (export DATABASEURL=localurl)
 // mLab url: "mongodb://Joseph:connect@ds149551.mlab.com:49551/js_yelpcamp_v12"
-var url = process.env.DATABASEURL;
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12d";
 //console.log(process.env.DATABASEURL);
 mongoose.connect(url);
 
